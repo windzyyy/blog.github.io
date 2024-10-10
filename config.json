@@ -4,11 +4,7 @@
     "avatarUrl":"https://raw.githubusercontent.com/windzyyy/blog.github.io/refs/heads/windzyyy-patch-1/v2-7d9adcd66e30bb05a3d6c307fa6df277_r.jpg",
     "GMEEK_VERSION":"last"
 }
+
 "startSite":"10/10/2024",
 "onePageListNum":13,
-"singlePage":["about"],
-"commentLabelColor":"#006b75",
-"i18n":"CN",
-"UTC":8,
-"urlMode":"pinyin",
-"needComment":1,
+"needComment":1
