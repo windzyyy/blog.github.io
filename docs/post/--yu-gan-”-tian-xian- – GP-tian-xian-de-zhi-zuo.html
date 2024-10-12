@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/windzyyy/blog.github.io/refs/heads/windzyyy-patch-1/v2-7d9adcd66e30bb05a3d6c307fa6df277_r.jpg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="_编者按：本文节选自《现代通信》杂志，作者BH1ERB。">
+<meta property="og:title" content=""鱼竿”天线 – GP天线的制作">
+<meta property="og:description" content="_编者按：本文节选自《现代通信》杂志，作者BH1ERB。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://windzyyy.github.io/blog.github.io/post/--yu-gan-%E2%80%9D-tian-xian-%20%E2%80%93%20GP-tian-xian-de-zhi-zuo.html">
+<meta property="og:image" content="https://raw.githubusercontent.com/windzyyy/blog.github.io/refs/heads/windzyyy-patch-1/v2-7d9adcd66e30bb05a3d6c307fa6df277_r.jpg">
+<title>"鱼竿”天线 – GP天线的制作</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">"鱼竿”天线 – GP天线的制作</h1>
+<div class="title-right">
+    <a href="https://windzyyy.github.io/blog.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/windzyyy/blog.github.io/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p><em>编者按：本文节选自《现代通信》杂志，作者BH1ERB。</em></p>
+<p>随着<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5&amp;zhida_source=entity" rel="nofollow">业余无线电</a>活动的普及，从U/V段聊天的“车腿”，再到参加每年各种国际比赛、追逐DX的业余无线电爱好者，越来越多的人加入到了HAM的行列。很多HAM也都在家中设置了固定电台，但这其中一大部分人还都游离在短波通联的门外，不是别的原因，正是因为居住在市区无法在居民楼架设短波天线。</p>
+<p>如今，小区的公共设施都由物业公司管理服务，又有代表广大业主权益的业主委员会监督。您要是住在楼顶还好说，在自家房顶架个正V天线，一点不起眼儿，又不影响别人，物业一般也都会开绿灯。更有甚者，起个5m～7m的塔，弄个<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E5%85%AB%E6%9C%A8%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">八木天线</a>也不是不可能。可您要是住在下面几层，想要绕开周围的邻居，上楼顶架设一副称心如意的天线，的确是个难事。往往是物业那疏通开了，架了没几天，被楼顶业主发现后一投诉，又得拆。但是您别慌，大有大玩，小有小玩，不是说上不了楼咱就不能“DXCC 400”了。本文就是介绍如何在楼房环境架设“鱼竿”天线，圆您一个短波收发梦。</p>
+<p>介绍“鱼竿”天线之前，我们先说说常用的三类短波天线。</p>
+<p><strong>第一类——垂直地网天线</strong>，也就是我们常说的GP天线，这种天线架设形式简单，最易于安装，如果有足够数量的地网增加辐射，效率堪比<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E5%81%B6%E6%9E%81%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">偶极天线</a>。由于GP天线的发射仰角较低，所以其作为简单有效的DX利器不可或缺。缺点就是噪音大。</p>
+<p><strong>第二类——偶极天线</strong>，也就是我们常说的DP天线，常见的架设形式有<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E5%80%92V&amp;zhida_source=entity" rel="nofollow">倒V</a>、正V、水平等形式，DP天线的效率相对要比GP天线高很多，且噪音要比GP天线低很多，但是占地面积大，单人架设安装不是很方便。</p>
+<p><strong>第三类——<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E6%8C%87%E5%90%91%E6%80%A7%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">指向性天线</a>“八木”</strong>，也就是YAGI。这种天线通常是由一个主振子、一个反射器和多个引向器单元组成。八木天线的效率高、方向性强，依照天线的尺寸，在所指方向拥有较高增益。</p>
+<p>其实，所谓的“鱼竿”天线就是GP天线，只是广大的HAM按照其水平架设方式和DIY的材质取了个“鱼竿”天线的名字，这名字在《<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E5%A4%A9%E7%BA%BF%E6%89%8B%E5%86%8C&amp;zhida_source=entity" rel="nofollow">天线手册</a>》上肯定是查不到的。我们安装的U/V段GP天线都是垂直架设（如装在车上的“钻石770H”车载天线，固定台架设的“钻石X510”天线等），短波GP天线通常也是垂直架设的，但是对于我们居住在楼房中间层，且无法上楼顶架天线的HAM来说，水平架设GP天线也许成了无奈的最佳选择。</p>
+<p>第一次接触“鱼竿”天线是在2008年奥运会特设台期间，那时候我住在北京的天通苑，当地有个知名火腿——BD1TCC杨老师（现呼号BA1AI），他在家中19层水平架设了其自制GP天线，通联了几大洲，也成为了通联QSO最多的BT1OB的值机员。后来我搬到了望京，也是19层，几次和物业接触无果后，我选择了“鱼竿”天线。</p>
+<p>从天线的结构上来说，咱们水平架设的GP天线可以有三种方式。一种是单波段全尺寸天线，一种是单波段加感天线，它可以是1/8、1/4、1/2波长。再有一种就是<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E5%A4%A9%E8%B0%83&amp;zhida_source=entity" rel="nofollow">天调</a>与一定长度的全尺寸天线直接工作，这种方式相对省事，一根天线全搞定。全尺寸天线的效率自然要比<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=2&amp;q=%E5%8A%A0%E6%84%9F%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">加感天线</a>高很多，20m、15m、10m等高波段，我们都可以制作1/4波长全尺寸天线，长度分别是5m、3.5m、2.5m。但是考虑到我们常用的40m、80m、160m等低波段天线的尺寸较大，在窗户外面水平架设全尺寸天线很不实际，所以这就需要选择加感天线，加感天线可以是底部加感、中部加感、顶部加感。就目前试验效果来看，中部加感天线的效率是相对最高的（其实想想日本钻石品牌的车载天线不都是中部加感吗？）。</p>
+<p>天线的长度分为物理长度和谐振长度，它取决于咱们工作波段的波长，如40m、80m、160m波段，按照粗略计算1/4波长的天线长度应该是10m、20m、40m。如果计划天线总长度在5m左右，那40m波段天线就是5m振子与5m的加感线圈；同理，80m波段天线就是5m振子与15m加感线圈，160m波段天线就是5m振子与35m加感线圈。当然，这种80m、160m波段的加感天线效率已经太低了（以上数值只是为了大伙看着直观而取的整数，实际制作天线还要考虑缩短系数等）。</p>
+<p>从天线的材质上说，最佳选择当然还是铝管。因为作为长期固定架设的天线，铝管有一定的韧性，完全不用担心刮大风的问题，是一劳永逸的选择，而且电气性能肯定要优于细铜丝，这也是我对GP天线几经升级改造后的粗知拙见。我最早制作的GP天线是用PVC管、漆包线缠绕加感线圈、一节304不锈钢棍作为振子组成，底部加感GP天线，算是试验品，当时的总长度只有1.5m，经过地网的匹配和<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=6&amp;q=%E6%8C%AF%E5%AD%90&amp;zhida_source=entity" rel="nofollow">振子</a>的修剪之后，可以自然谐振在7.050MHz上，试验期间通了不少国内台。此方法等同于买一根成品鱼竿然后缠绕线圈作为加感天线，国内大部分HAM所作的GP天线也多为这种方式。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/95d954861da55dba05eba74bf2e40136e1718171760d2215e883c0d80f197f6c/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d65633737623730323464663736666636623134636434363230653334656262395f622e6a7067"><img src="https://camo.githubusercontent.com/95d954861da55dba05eba74bf2e40136e1718171760d2215e883c0d80f197f6c/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d65633737623730323464663736666636623134636434363230653334656262395f622e6a7067" alt="" data-canonical-src="https://pic2.zhimg.com/v2-ec77b7024df76ff6b14cd4620e34ebb9_b.jpg" style="max-width: 100%;"></a></p>
+<p>底部加感的GP天线制作图纸</p>
+<p>这种方式制作的天线有优点也有缺点：优点——底部加感方便安装调试选择自然谐振点，而且可以做成类似PAC-12的抽头天线，一根天线通过调整线圈数量达到工作在多波段的目的。缺点——底部加感天线的效率始终不如中部加感。经过多次的通联、改造、试验后， 我通过缩短加感线圈的长度，增加振子长度，由底部加感改为中部加感，成为了最终版本的天线——物理长度5.5m，1/4波长、谐振长度10.25m。其中，振子长度5.3m左右，缠绕4.95m左右漆包线作为加感线圈。天线的计算公式如下：天线谐振长度=300/工作频率/4×0.96（0.96是缩短系数），即300/7.023/4×0.96 = 10.25m。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/cc10542692597653a4d21d045fee5d705f031a30970a59198505f4ff8097ee70/68747470733a2f2f706963332e7a68696d672e636f6d2f76322d66363837343064353765636135313865653135386361326432626530396330655f622e6a7067"><img src="https://camo.githubusercontent.com/cc10542692597653a4d21d045fee5d705f031a30970a59198505f4ff8097ee70/68747470733a2f2f706963332e7a68696d672e636f6d2f76322d66363837343064353765636135313865653135386361326432626530396330655f622e6a7067" alt="" data-canonical-src="https://pic3.zhimg.com/v2-f68740d57eca518ee158ca2d2be09c0e_b.jpg" style="max-width: 100%;"></a></p>
+<p>中部加感的GP天线制作图纸</p>
+<p><strong>鱼竿天线制作方法</strong></p>
+<p>1、准备4节铝管，底部采用35mm左右的铝管套30mm左右的铝管，顶部采用15mm左右的铝管套10mm左右的铝管，采用大套小的连接方法，目的是减少风阻系数。铝管交接处开缝，用不锈钢抱箍抱死，如果您担心时间长了不锈钢抱箍会脱落，也可以在交界处打眼用螺丝将两根铝管穿透锁死，更加稳妥。2、准备直径50mm的橡胶棒（也可以用其它绝缘材料如PPR管），在其上缠绕总长度为4.95m左右的漆包线作为加感线圈。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c2ad1e06cffcf467d426683038b08db3328990f29357edb9596d13d5db3995e5/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d32653338303134616463323137653564303534353565303231623539633939355f622e6a7067"><img src="https://camo.githubusercontent.com/c2ad1e06cffcf467d426683038b08db3328990f29357edb9596d13d5db3995e5/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d32653338303134616463323137653564303534353565303231623539633939355f622e6a7067" alt="" data-canonical-src="https://picx.zhimg.com/v2-2e38014adc217e5d05455e021b59c995_b.jpg" style="max-width: 100%;"></a></p>
+<p>1.0mm漆包线缠绕的加感线圈</p>
+<p>3、天线底部用橡胶绝缘棒套在振子上，用以跟室外支架固定使用，起到振子与接地绝缘的目的。为了防止在室外长时间使用，橡胶棒变形，我在橡胶棒外又加固了一个不锈钢管，增加了室外固定的坚固程度。如果没有橡胶棒，也可以用PPR管代替，选择内径和铝管外径差不多的PPR管500mm，套在天线底部，用热缩管热缩上几层，也可以打孔用螺丝或者<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E8%86%A8%E8%83%80%E8%9E%BA%E6%A0%93&amp;zhida_source=entity" rel="nofollow">膨胀螺栓</a>固定。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/880f54cad5474aea00ae3ef8ad9d5510039d302f8b36c46b6c696ca0d461b6e9/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d35343737363261646165373832323462643639623033383163383266373762645f622e6a7067"><img src="https://camo.githubusercontent.com/880f54cad5474aea00ae3ef8ad9d5510039d302f8b36c46b6c696ca0d461b6e9/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d35343737363261646165373832323462643639623033383163383266373762645f622e6a7067" alt="" data-canonical-src="https://picx.zhimg.com/v2-547762adae78224bd69b0381c82f77bd_b.jpg" style="max-width: 100%;"></a></p>
+<p>用来室外固定的底部绝缘棒</p>
+<p>4、天线根部直接用螺丝打穿铝管，作为根部馈电，用以和馈线相连。也可以用个SL16的M座作为根部馈电方式，更加美观。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c2a5732f798db2b507188e866fedf90da3efc35e12eac0950897cfc55c6f86e6/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d32353739323963376361393437666536323131343263376438656366376336645f622e6a7067"><img src="https://camo.githubusercontent.com/c2a5732f798db2b507188e866fedf90da3efc35e12eac0950897cfc55c6f86e6/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d32353739323963376361393437666536323131343263376438656366376336645f622e6a7067" alt="" data-canonical-src="https://picx.zhimg.com/v2-257929c7ca947fe621142c7d8ecf7c6d_b.jpg" style="max-width: 100%;"></a></p>
+<p>底部外套热缩管用PPR管绝缘</p>
+<p>如上所述，一副40m单波段中部加感的GP天线就做好了。套用上面的制作方法，1/4波长20m单波段GP天线的尺寸是300/14.26/4×0.96 = 5.05m；1/4波长15m单波段GP天线的尺寸是300/21.200/4×0.96 = 3.4m。其尺寸相对较小，我们不需要加感线圈，完全可以按照全尺寸来制作。当然，如果您手头上有类似ICOM AH-4这种室外天调，完全可以做一根5m～10m长的全尺寸天线，采用根部馈电方式接天调，10m的长度，从80m～10m各波段都可以相对高效的工作了。我后来置办了LDG AT-200Pro2室内型天调，接在了20m波段天线上，这是一个很高效的天调，我现在可以工作在任一波段了。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5a88239e3895c8e001b8efde406344d70c69a4252b1ba9fe9eb2916911000461/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d64303765396632396338373766393830393134393065396335343464386637335f622e6a7067"><img src="https://camo.githubusercontent.com/5a88239e3895c8e001b8efde406344d70c69a4252b1ba9fe9eb2916911000461/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d64303765396632396338373766393830393134393065396335343464386637335f622e6a7067" alt="" data-canonical-src="https://pic2.zhimg.com/v2-d07e9f29c877f98091490e9c544d8f73_b.jpg" style="max-width: 100%;"></a></p>
+<p>采用中部加感的GP天线实物图</p>
+<p>5、介绍完了天线的制作，我们再说说天线的安装方式。如果您没有室外天调，又想像我一样准备在窗户外面大干特干，安装三根单波段天线，那就需要一个坚固的室外架子作为天线的固定架。我的室外天线固定架是一个“框型”的，长1600mm、宽300mm、深600mm，底部为实底儿，框内可以放一些杂物，框的上面可以同时固定4根天线。自己画个大概的图，到建材城找做铁艺的师傅加工的，成本大概在200元左右。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bcc462e552a4df34ab051fffc7dc47dbca062e6727ca518154be0aa78e08e415/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d30393331373239393565336334646465363838313635323766303232333361315f622e6a7067"><img src="https://camo.githubusercontent.com/bcc462e552a4df34ab051fffc7dc47dbca062e6727ca518154be0aa78e08e415/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d30393331373239393565336334646465363838313635323766303232333361315f622e6a7067" alt="" data-canonical-src="https://pic2.zhimg.com/v2-093172995e3c4dde68816527f02233a1_b.jpg" style="max-width: 100%;"></a></p>
+<p>可以固定四根天线的框型固定架</p>
+<p>6、如果是使用室外天调配合5m～10m全尺寸天线的方式架设，可以做个相对小一点的架子。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bb1c196041044e3171dffa6bc32ebb8c5a23a215a236298e667e294b5c06ed2a/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d61316130323834393066626135373932323565396339346436663234623063315f622e6a7067"><img src="https://camo.githubusercontent.com/bb1c196041044e3171dffa6bc32ebb8c5a23a215a236298e667e294b5c06ed2a/68747470733a2f2f706963322e7a68696d672e636f6d2f76322d61316130323834393066626135373932323565396339346436663234623063315f622e6a7067" alt="" data-canonical-src="https://pic2.zhimg.com/v2-a1a028490fba579225e9c94d6f24b0c1_b.jpg" style="max-width: 100%;"></a></p>
+<p>单根天线的固定支</p>
+<p>7、安装很简单，在楼外墙上打4～8个孔，装上涨栓把架子往上一固定即可。我当时花50元找了个做空调安装的师傅给装上的，毕竟19层太高了，没必要冒这个风险，还是找专业的人员来安装比较好。安装好固定支架，将天线架在固定支架上，用U型卡抱箍抱死即完成了天线的固定。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/5df46eba8d6646373e80eed489114a32e1d2d1cb24f05d51add6104c63fccd93/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d31303736333864643533316265333834653364346431313366613862393335645f622e6a7067"><img src="https://camo.githubusercontent.com/5df46eba8d6646373e80eed489114a32e1d2d1cb24f05d51add6104c63fccd93/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d31303736333864643533316265333834653364346431313366613862393335645f622e6a7067" alt="" data-canonical-src="https://picx.zhimg.com/v2-107638dd531be384e3d4d113fa8b935d_b.jpg" style="max-width: 100%;"></a></p>
+<p>固定在架子上的天线</p>
+<p>下面该介绍天线的调试了，因为天线根据架设环境的不同，按照理论数据制作的天线也不一定就谐振在我们设计的工作频率，这就需要通过增加和缩短振子的长度，让其工作在我们需要的业余频率。天线固定好后，接好馈电线缆，另一端先接在<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E5%A4%A9%E7%BA%BF%E5%88%86%E6%9E%90%E4%BB%AA&amp;zhida_source=entity" rel="nofollow">天线分析仪</a>上。查看天线阻抗在50Ω时，天线驻波最小值时，天线的自然谐振频率。也就是SWR＜1.5（SWR值能达到1.1是最好的）时的工作频率。天线自然谐振频率如果低于我们需要的工作频率时，那么就缩短振子的长度；天线自然谐振频率高于我们需要的工作频率时，就增加振子的长度。直到其可以自然谐振到我们需要的工作频率为止。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/427d3bbb6f24a2552434eb1da30f0eea42ac2b2112408a97f88b3d6381b8ee22/68747470733a2f2f706963332e7a68696d672e636f6d2f76322d37313133656666653866626163393533633362653333313063666363633964615f622e6a7067"><img src="https://camo.githubusercontent.com/427d3bbb6f24a2552434eb1da30f0eea42ac2b2112408a97f88b3d6381b8ee22/68747470733a2f2f706963332e7a68696d672e636f6d2f76322d37313133656666653866626163393533633362653333313063666363633964615f622e6a7067" alt="" data-canonical-src="https://pic3.zhimg.com/v2-7113effe8fbac953c3be3310cfccc9da_b.jpg" style="max-width: 100%;"></a></p>
+<p>我的3根单波段GP天线（15m、20m、40m波段）</p>
+<p>也有的环境通过增加、缩短阵子长度虽然可以让天线在50Ω阻抗的时候工作在我们需要的频率，但是驻波却比较高，通常是SWR大于1.5小于3，这时候就需要增加地网来调整天线的<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E9%A9%BB%E6%B3%A2%E6%AF%94&amp;zhida_source=entity" rel="nofollow">驻波比</a>。我们的天线支架通过涨栓已经固定到了楼体内了，它本身就是个很好的接地点。馈线的金属屏蔽层与其固定好后，天线的阻抗、驻波都会有变化。如果驻波还是下不来，那就还需要增加一根自由垂落的地网，长度等于或者不超过1/4波长即可，需要根据现场试验稍作修剪。地网的材质最好选择多股的并行线，如电话线、8芯扁平线，如果能在电子市场买到ATA100的IDE硬盘数据线那效果最好不过了，它本身就是80芯的排线，宽度仅50mm左右。地网可以很好地增加GP天线的辐射效果。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e0244b3f09114eea173f4ed03505689c83e6173137f316d4ebf60ef2609a8790/68747470733a2f2f706963342e7a68696d672e636f6d2f76322d63623932323564323037303134376161656234323039626266663638643366665f622e6a7067"><img src="https://camo.githubusercontent.com/e0244b3f09114eea173f4ed03505689c83e6173137f316d4ebf60ef2609a8790/68747470733a2f2f706963342e7a68696d672e636f6d2f76322d63623932323564323037303134376161656234323039626266663638643366665f622e6a7067" alt="" data-canonical-src="https://pic4.zhimg.com/v2-cb9225d2070147aaeb4209bbff68d3ff_b.jpg" style="max-width: 100%;"></a></p>
+<p>水平架设的GP天线</p>
+<p>这副天线我使用了将近1年的时间，基本上我能够听到的电台，都可以叫通，整体效果还是不错的。我使用的电台是ICOM IC-756ProIII，这一年内完成了2000多个QSO，通联到的DXCC实体已经有77个。SSB模式通联到的最远的电台是位于20000km以外的南美洲阿根廷、巴西。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e5c432c659d89a594794dd394be6a373b4d850aa3ee43c784ddfd72fe62268d4/68747470733a2f2f706963312e7a68696d672e636f6d2f76322d36323936353662306336393263653437613235636331326132373830366135365f622e6a7067"><img src="https://camo.githubusercontent.com/e5c432c659d89a594794dd394be6a373b4d850aa3ee43c784ddfd72fe62268d4/68747470733a2f2f706963312e7a68696d672e636f6d2f76322d36323936353662306336393263653437613235636331326132373830366135365f622e6a7067" alt="" data-canonical-src="https://pic1.zhimg.com/v2-629656b0c692ce47a25cc12a27806a56_b.jpg" style="max-width: 100%;"></a></p>
+<p>logger32统计的已经通联过的DXCC实体数量77个</p>
+<p>上面说的比较多了，大伙看着可能有点疲劳，最后总结一下我对“鱼竿”天线一些粗知拙见的心得，和大伙分享。</p>
+<p>天线选材：第一选择当然是7075-T6材质的铝管（大概30元/m）， 6063-T6材质的亦可（大概15元/m），只不过后者要比前者垂度大点。如果您不是作为固定天线使用，大可买PVC管（20~40元/根，4m/根）或者玻璃钢鱼竿按照前文介绍的缠绕线圈制作天线。天线的带宽和振子的粗细是成正比的，所以铝管作为振子与漆包线或者电源线缠绕的天线相比，带宽要更加宽。</p>
+<p>加感线圈：1.0mm的漆包线最好，没有漆包线用单股电源线也可以，只不过单股电源线比较粗，缠绕同尺寸长度的线圈要比绕漆包线的大很多。</p>
+<p>接地：电台、天调、天线都一样要接地，这对天线的自然谐振频率、阻抗、驻波都有很大的影响。</p>
+<p>馈电方式：如果为了拧标准M头的馈线方便，可以给天线接一个SL-16的M座，固定在一个防水盒上。如果天线的材质是铝管，那直接打一个过孔，拧个螺丝打上玻璃胶，同轴馈线做个<a href="https://zhida.zhihu.com/search?content_id=238512003&amp;content_type=Article&amp;match_order=1&amp;q=%E6%8E%A5%E7%BA%BF%E7%AB%AF%E5%AD%90&amp;zhida_source=entity" rel="nofollow">接线端子</a>，往馈电点上一拧螺母直接馈电，衰减肯定比通过M座的要小。如果使用室外天调连接天线，也一定要安装在天线根部馈电，减少损耗。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/eb4a06c86d1f539e933c9a0d4cd7286c245e699d8d257a6b468b58d017e50fde/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d31393731636236333662303130616132666335616238633336343330633564355f622e6a7067"><img src="https://camo.githubusercontent.com/eb4a06c86d1f539e933c9a0d4cd7286c245e699d8d257a6b468b58d017e50fde/68747470733a2f2f706963782e7a68696d672e636f6d2f76322d31393731636236333662303130616132666335616238633336343330633564355f622e6a7067" alt="" data-canonical-src="https://picx.zhimg.com/v2-1971cb636b010aa2fc5ab8c36430c5d5_b.jpg" style="max-width: 100%;"></a></p>
+<p>天线馈电方式</p>
+<p>地网选材：无论是水平架设，还是垂直架设的GP天线，地网都是提高辐射效果必不可少的。最早我使用8芯扁平线觉得挺好，后来发现整捆80芯IDE硬盘数据线是目前为止我认为最好的地网材料了。天线的高度与效率：这个要因地而异了，按照理论上说，大于天线工作波段1/4波长即可，如您工作在40m波段，架设高度应高于10m，也就是4层楼以上即可。通常来讲，住的越高，这种水平架设GP天线的效果越好。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://windzyyy.github.io/blog.github.io">天落银河</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","windzyyy/blog.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
