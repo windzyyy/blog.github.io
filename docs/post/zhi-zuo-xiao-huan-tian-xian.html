@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/windzyyy/blog.github.io/refs/heads/windzyyy-patch-1/v2-7d9adcd66e30bb05a3d6c307fa6df277_r.jpg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="谢邀，天线作为一个能量转换器，一些典型结构并不需要太多的电磁场专业基础，多搜资料，边实践边学习上手会比较快，不是么？
+
+来自百度的网友分享：
+
+[“蜗居”中的通联神器――动手制作小环天线 - 经验共享 - 博趣](https://link.zhihu.com/?target=http%3A//www.hobbypress.cn/bencandy.php%3Ffid-297-id-7940-page-1.htm)
+
+最近关于小环天线的话题在火腿圈里讨论得很热闹，各大论坛天线板块也有很多爱好者相互交流自己的作品以及使用报告，大家对小环天线的评价都比较高。">
+<meta property="og:title" content="制作小环天线">
+<meta property="og:description" content="谢邀，天线作为一个能量转换器，一些典型结构并不需要太多的电磁场专业基础，多搜资料，边实践边学习上手会比较快，不是么？
+
+来自百度的网友分享：
+
+[“蜗居”中的通联神器――动手制作小环天线 - 经验共享 - 博趣](https://link.zhihu.com/?target=http%3A//www.hobbypress.cn/bencandy.php%3Ffid-297-id-7940-page-1.htm)
+
+最近关于小环天线的话题在火腿圈里讨论得很热闹，各大论坛天线板块也有很多爱好者相互交流自己的作品以及使用报告，大家对小环天线的评价都比较高。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://windzyyy.github.io/blog.github.io/post/zhi-zuo-xiao-huan-tian-xian.html">
+<meta property="og:image" content="https://raw.githubusercontent.com/windzyyy/blog.github.io/refs/heads/windzyyy-patch-1/v2-7d9adcd66e30bb05a3d6c307fa6df277_r.jpg">
+<title>制作小环天线</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">制作小环天线</h1>
+<div class="title-right">
+    <a href="https://windzyyy.github.io/blog.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/windzyyy/blog.github.io/issues/7" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>谢邀，天线作为一个能量转换器，一些典型结构并不需要太多的电磁场专业基础，多搜资料，边实践边学习上手会比较快，不是么？</p>
+<p>来自百度的网友分享：</p>
+<p><a href="https://link.zhihu.com/?target=http%3A//www.hobbypress.cn/bencandy.php%3Ffid-297-id-7940-page-1.htm" rel="nofollow">“蜗居”中的通联神器――动手制作小环天线 - 经验共享 - 博趣</a></p>
+<p>最近关于小环天线的话题在火腿圈里讨论得很热闹，各大论坛天线板块也有很多爱好者相互交流自己的作品以及使用报告，大家对小环天线的评价都比较高。由于小环天线体积小，增益不错，所以得到很多因条件限制，无法架设大型短波天线的HAM的青睐，可谓是“蜗居”中的通联神器！HAM只需要一段小于波长十分之一长度的导线弯成一个圆环，就能达到甚至超过全尺寸天线的接收效果。小环天线这让我这个天线爱好者产生了兴趣，决定做一个小环天线，体验其带来的通联乐趣。</p>
+<p>动手之前，我先搬出厚厚的<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%A4%A9%E7%BA%BF%E6%89%8B%E5%86%8C&amp;zhida_source=entity" rel="nofollow">天线手册</a>，学习一下小环天线的基本原理。我觉得边学习边实践是个不错的方法。在我看来，作为一个<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5&amp;zhida_source=entity" rel="nofollow">业余无线电</a>爱好者对问题的认识并不需到搞科研的程度，了解一种天线形式的<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86&amp;zhida_source=entity" rel="nofollow">基本知识</a>即可，加之动手实践过程中带来的乐趣，一定会加深对它的认识。</p>
+<p><strong>小环天线的原理</strong></p>
+<p>环形天线（loop antenna）是将一根金属导线绕成一定形状，如圆形、方形、三角形等，以导体两端作为输出端的结构。绕制多圈（如螺旋状或重叠绕制）的称为多圈环天线。根据环形天线的周长L相对与波长λ的大小，<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=3&amp;q=%E7%8E%AF%E5%BD%A2%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">环形天线</a>可分为电大环（L≥λ）、中等环（λ/4≤L≤λ）和电小环（L&lt;λ/4）三类。电小环天线是实际中应用最多的，如收音机中的天线、便携式电台接受天线、<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E6%97%A0%E7%BA%BF%E7%94%B5%E5%AF%BC%E8%88%AA&amp;zhida_source=entity" rel="nofollow">无线电导航</a>定位天线、场强计的探头天线等。电大环天线主要用作定向<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E9%98%B5%E5%88%97%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">阵列天线</a>的单元。</p>
+<p>小环天线又称为电流环天线，是由两个共面的双电流环构成，内部的耦合环由传输线馈电，通过电感耦合激励外面的大环，当处于谐振状态时，由外面的大环辐射能量。对于小环天线，一般有如下特性：小环天线是电流环结构的窄带谐振天线，增益始终为负值，特定架设角度的小环天具有NVIS特性。小环天线是磁场天线，在特定的场合可以有比鞭天线优越得多的收发特性。小环天线通常用于定频收发的，特殊结构的小环天线也可以用于跳频通信。</p>
+<p>通常，小环天线在接收机上的信号强度指示值“S”要比<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E7%BA%BF%E5%A4%A9%E7%BA%BF&amp;zhida_source=entity" rel="nofollow">线天线</a>偏低，这是由于小环天线的负增益特性决定的，我们不要特别计较这个“S”，这并不重要，在我们需要通联时，只有能听得到、叫得着才是好的天线。</p>
+<p>环形天线的终端<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E8%B4%9F%E8%BD%BD%E9%98%BB%E6%8A%97&amp;zhida_source=entity" rel="nofollow">负载阻抗</a>可以为零，也可以等于环的特性阻抗，其上的电流分布和平行传输线类似。电小环上的电流近似按等幅同相分布。电大环上电流为驻波分布。当端接负载的阻抗等于环的特性阻抗时，环上的电流为行波分布。</p>
+<p>依据电磁辐射的二重性原理，电小环和垂直于环面放置的小电偶极天线的辐射场除将电和磁的量互换外都是类似的，即在环面的平面上方向图是圆，环轴所在平面上方向图是“8”字形,沿环轴方向的辐射为零。</p>
+<p>环可以是空心的或磁芯的；单匝的或多匝的。理论和实验证明，辐射场与环的面积、匝数和环上的电流成正比，与工作波长的平方和距离成反比；与环的形状关系不大。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/abd99d606f25e20244cb5abc406fd14a0e21e96eb82ffb46915873bf004eb9ac/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d30373462616564663461393036656663323330633438323235313137653135625f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/abd99d606f25e20244cb5abc406fd14a0e21e96eb82ffb46915873bf004eb9ac/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d30373462616564663461393036656663323330633438323235313137653135625f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://picx.zhimg.com/50/v2-074baedf4a906efc230c48225117e15b_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/72df40ad59531aa064b967d798c986cf191fc9a4b32827832d47a9fea1df8c33/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d61616165656264386339333633313631373630343661636665333162343839615f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/72df40ad59531aa064b967d798c986cf191fc9a4b32827832d47a9fea1df8c33/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d61616165656264386339333633313631373630343661636665333162343839615f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://picx.zhimg.com/50/v2-aaaeebd8c936316176046acfe31b489a_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p>国外HAM制作的环形天线</p>
+<p><strong>制作小环天线</strong></p>
+<p>小环天线在很多年前就已经进入了大家的视线，中波收音机里面的磁棒天线应该是大家最熟悉的。业余无线电主要应用的是1.8MHz、3.5MHz低噪音定向接收天线，其理想的辐射方向图是一个“8”字型。下面我要做的是一个谐振环天线，可以理解为是一个电感和调谐电容并联的谐振电路，这样的<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%B9%B6%E8%81%94%E8%B0%90%E6%8C%AF&amp;zhida_source=entity" rel="nofollow">并联谐振</a>电路Q值很高，两端的电压很高，如果用小环天线来发射的话，高耐压的谐振电容不太好找。不过用来做接收或者QRP操作的话，我用的老式电子管收音机里面的365×2的双联可变电容还是可以胜任的，至少20W的功率并不搞，它还没有发生击穿打火的现象。当然，换上自制或淘来的高耐压空气电容，或者用真空可变电容，上100W功率没有问题。只是电容体积较大，想办法固定牢靠是个难题。</p>
+<p>调谐天线还有一些特殊的优点，如在接受系统的前端有很高的选择性，可以大大提高接收机的<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%8A%A8%E6%80%81%E8%8C%83%E5%9B%B4&amp;zhida_source=entity" rel="nofollow">动态范围</a>。另外可利用小环天线<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E8%BE%90%E5%B0%84%E5%9B%BE&amp;zhida_source=entity" rel="nofollow">辐射图</a>的零点来消除同频或临近干扰，当然，干扰源和远距离电台不能在一个方向上。</p>
+<p>在了解了小环天线的一些基本特性后，下面可以借助一些<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%B0%8F%E7%A8%8B%E5%BA%8F&amp;zhida_source=entity" rel="nofollow">小程序</a>来计算制作的小环天线所需材料的一些参数，也可以将手头上已有材料的参数输入程序中，看看会得到怎样的结果。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/603ca0cc0911970e3703f084d24068b437f33034bf2e86cf91d168d35aab66ac/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d30353433346362666166613232343731363666313066313836616139303834615f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/603ca0cc0911970e3703f084d24068b437f33034bf2e86cf91d168d35aab66ac/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d30353433346362666166613232343731363666313066313836616139303834615f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://picx.zhimg.com/50/v2-05434cbfafa2247166f10f186aa9084a_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/fe551aedf23750c1bee5ccf8aa0bddfb4f721786a9accefe2df25a4bdcb6b2c9/68747470733a2f2f706963612e7a68696d672e636f6d2f35302f76322d63626436356239613638653933393763333831353434316336653136653765325f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/fe551aedf23750c1bee5ccf8aa0bddfb4f721786a9accefe2df25a4bdcb6b2c9/68747470733a2f2f706963612e7a68696d672e636f6d2f35302f76322d63626436356239613638653933393763333831353434316336653136653765325f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://pica.zhimg.com/50/v2-cbd65b9a68e9397c3815441c6e16e7e2_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p>表1</p>
+<p>我用OH7SV在EXCEL里编的一个小程序来计算我手上一节零头馈管的参数。先在黄色区域里输入工作所需的频率、主环的周长、主环材料的直径以及要用到的最大功率。如表1所示，最低工作在7MHz，主环我用的是一节馈管，馈管屏蔽层的直径是12mm，我准备使用的最大功率为20W。</p>
+<p>表1中绿色区域为自动生成计算结果，其中黑体字是我要知道的关键值。这样就知道要用577Pf的调节电容，那么我的老式电子管收音机2×365的双联空气可变电容就要并联使用了，否则在7MHz是无法工作的。接下来我得到了耦合环直径，通过计算也就知道了我要用多长的导线来弯这个环，一般是主环的五分之一。另外还得到了天线的效率、带宽、Q值以及更重要的电容耐压值。通过调整主环的周长、材料直径参数，我们还会发现一些规律，比如做主环的馈管或铜管越粗，小环天线的Q值越高，会使带宽越窄，这样在做V/U段天线时就不能选太粗的材料了，否则带宽太窄，FM模式将无法使用。</p>
+<p>数据有了，接下来准备材料。</p>
+<p>主环：1.25m直径12mm馈管一根；</p>
+<p>耦合环：25cm，直径2平方单股铜线一根；</p>
+<p>调谐电容：2*365空气双联一个；</p>
+<p>防水盒：根据电容大小选择合适的盒子；</p>
+<p><a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E9%98%B2%E6%B0%B4%E6%8E%A5%E5%A4%B4&amp;zhida_source=entity" rel="nofollow">防水接头</a>：2个，固定馈管用；</p>
+<p>M座：一个；</p>
+<p>馈管夹：一个，固定耦合环及M座；</p>
+<p>电容旋钮：一个。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e90b5957021c1bd7e8ad0fb9d6621414536d5fe1e077e24a3f5adcb77f20ab8f/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d61653338343533313231636237613930613035366465313732336436343734395f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/e90b5957021c1bd7e8ad0fb9d6621414536d5fe1e077e24a3f5adcb77f20ab8f/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d61653338343533313231636237613930613035366465313732336436343734395f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://picx.zhimg.com/50/v2-ae38453121cb7a90a056de1723d64749_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p>制作好的小环天线</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/bec405b274544b4072d5fcca55f8e52b053df40a4fea87c7684a4c628d17538c/68747470733a2f2f706963612e7a68696d672e636f6d2f35302f76322d39613165393462323537623932303666383263383762326164386166633863315f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/bec405b274544b4072d5fcca55f8e52b053df40a4fea87c7684a4c628d17538c/68747470733a2f2f706963612e7a68696d672e636f6d2f35302f76322d39613165393462323537623932303666383263383762326164386166633863315f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://pica.zhimg.com/50/v2-9a1e94b257b9206f82c87b2ad8afc8c1_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p>调谐电容</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/497a590d42d55ff6fe9f3843e75bd404c46f0b759aed2e9b50a6066f174dcb66/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d34393034656562653231366436396631646463393139656565363039383461635f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/497a590d42d55ff6fe9f3843e75bd404c46f0b759aed2e9b50a6066f174dcb66/68747470733a2f2f706963782e7a68696d672e636f6d2f35302f76322d34393034656562653231366436396631646463393139656565363039383461635f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://picx.zhimg.com/50/v2-4904eebe216d69f1ddc919eee60984ac_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e7d7e9ff133863b2c836c9ebae1fbf53b7a46fce9abb7afbb2c68e4910d4fed0/68747470733a2f2f706963312e7a68696d672e636f6d2f35302f76322d38363738303039396136663239366564313666616262346332373638353363355f373230772e6a70673f736f757263653d3164656638616361"><img src="https://camo.githubusercontent.com/e7d7e9ff133863b2c836c9ebae1fbf53b7a46fce9abb7afbb2c68e4910d4fed0/68747470733a2f2f706963312e7a68696d672e636f6d2f35302f76322d38363738303039396136663239366564313666616262346332373638353363355f373230772e6a70673f736f757263653d3164656638616361" alt="" data-canonical-src="https://pic1.zhimg.com/50/v2-86780099a6f296ed16fabb4c276853c5_720w.jpg?source=1def8aca" style="max-width: 100%;"></a></p>
+<p>将小环天线固定在三脚架上耦合环直接焊在M座上</p>
+<p>制作难度不大，相信爱好者应该能够制作好。请注意电容与馈管的连接尽量用表面积大一些的材料焊接，这里建议用<a href="https://zhida.zhihu.com/search?content_id=55440568&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%90%8C%E8%BD%B4%E7%94%B5%E7%BC%86&amp;zhida_source=entity" rel="nofollow">同轴电缆</a>外编织线。</p>
+<p><strong>测试小环天线</strong></p>
+<p>将小环天线固定在三脚架上，电台用馈线连接小环天线，设定好接收频率，这时喇叭中可能很安静，慢慢转动可调电容的旋钮，可以发现当转到某个位置时喇叭中噪音突然变大，这时的电容的位置就是天线谐振的位置。将电台切换到CW模式小功率发射，再仔细微调电容，可以将驻波调到最低。这副小环天线可以从7MHz到30MHz频率范围内将驻波调到1.5以下。调整驻波不光是个技术活，还得靠感觉摸索。由于没有减速装置，电容只要稍微动一点点，驻波就会无穷大。实在是佩服到访的BD3CT,他只靠听噪音的大小就可以将各波段驻波调到最低，而我这个制造者还要来回调试好几下才行。</p>
+<p>通过使用小环天线，HAM可在室内清晰地收听各波段上的通联，由于天线在室内，信号强度还是会打些折扣。BD3CT甚至还用它和本地的BD4WG完成了一个CW的QSO。</p>
+<p>因为江苏省协会在11楼，面积也不大，无法架设短波天线。经过一段时间的使用，小环天线是正确的选择。它体积小巧接收性能也不错，完全可以胜任日常听听短波通联，做一些收发信测试的工作。有了这次经验的积累，下一步就可以做大一点的小环天线了，这样天线的效率才会提高。另外再给小环天线增加减速装置以及可自动控制的电机就可以更加方便的使用了。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://windzyyy.github.io/blog.github.io">天落银河</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","windzyyy/blog.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
