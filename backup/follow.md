@@ -1,1 +1,0 @@
-This message is used to verify that this feed (feedId:68626659915751424) belongs to me (userId:46871140478930944). Join me in enjoying the next generation information browser https://follow.is.
